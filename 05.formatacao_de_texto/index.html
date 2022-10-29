@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de textos</title>
+</head>
+<body>
+    <!-- STRONG BOLD NEGRITO -->
+    <p>Texto usando a tag strong (força): <strong>Texto de Exemplo.</strong></p>
+
+    <!-- EM ENFASE ITÁLICO -->
+    <p>Texto usando a tag em (enfase, itálico): <em>Texto de Exemplo.</em></p>
+
+    <!-- PODEMOS USAR AS FOLHAS DE ESTILO PARA MUDAR A COR DO MARCADOR -->
+    <p>Texto usando a tag mark: <mark>Texto de Exemplo.</mark></p>
+
+    <!-- AUMENTA O TAMANHO DO TEXTO, ENTRARÁ EM DESUSO -->
+    <p>Texto usando a tag big: <big>Texto de Exemplo.</big>
+    
+    <!-- DIMINUE O TAMANHO DO TEXTO -->
+    <p>Texto usando a tag small: <small>Texto de Exemplo.</small></p>
+
+    <!-- DEL, TEXTO QUE ESTÁ LÁ, MAS SERÁ DESCONSIDERADO -->
+    <p>Texto usando a tag del: <del>Texto de Exemplo.</del></p>
+
+    <!-- TEXTO INSERIDO, SUBLINHADO -->
+    <p>Texto usando a tag ins: <ins>Texto de Exemplo.</ins></p>
+
+    <!-- SUBESCRITO -->
+    <p>Texto usando a tag sub: H<sub>2</sub>O</p>
+
+    <!-- SOBRESCRITO -->
+    <p>Texto usando a tag sup: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+
+    <!-- USANDO FORMATAÇÃO PARA CÓDIGOS -->
+    <!-- USAMOS A TAG "CODE" PARA DEIXAR A FONTE MONOESPAÇADA E USAMOS A TAG "PRE" PARA "ACOMPANHAR A FORMATAÇÃO DIGITADA ABAIXO" -->
+    <p>Trecho de código em python sem <del>pre</del> e <del>code</del>:</p>
+    <p>
+        num = eval(input("Digite um valor numérico:"))
+        if(num % 2) == 0:
+            print(f"O número digitado foi {num}, e é par")
+        else:
+            print(f"O número digitado foi {num}, e é impar")
+        print("Fim do programa.")
+    </p>
+
+    <p>Trecho de código em python sem a tag <del>pre</del> e com a tag <strong>code</strong></p>
+    <p><code>
+        num = eval(input("Digite um valor numérico:"))
+        if(num % 2) == 0:
+            print(f"O número digitado foi {num}, e é par")
+        else:
+            print(f"O número digitado foi {num}, e é impar")
+        print("Fim do programa.")
+    </code></p>
+
+    <p>Trecho de código em python com as tags <strong>pre</strong> e <strong>code</strong></p>
+    <p><code>
+    <pre>    num = eval(input("Digite um valor numérico:"))
+    if(num % 2) == 0:
+        print(f"O número digitado foi {num}, e é par")
+    else:
+        print(f"O número digitado foi {num}, e é impar")
+    print("Fim do programa.")</pre></code></p>
+
+    <!-- COLOCA AS ASPAS DUPLAS NO TEXTO -->
+    <p>Textos com citação, usando a tag : <q>Texto de Exemplo.</q></p>
+
+    <p>Para citações longas, usamos o blockquote, o atributo cite é utilizado para mostrar onde foi coletada a citação. O blockquote já coloca um espaçamento padrão.</p>
+    <blockquote cite="https://www.infomoney.com.br/cotacoes/cripto/ativo/bitcoin-btc/">O Bitcoin usa um código complexo, que não pode ser alterado, e todas as transações são protegidas por criptografia. Cada transação é validada por um grupo de pessoas, chamadas de mineradores, por meio de computadores, que gravam estas operações na blockchain, garantindo a segurança de todo o sistema.</blockquote>
+
+    <!-- ABREVIAÇÕES -->
+    <p>Usando a tag abbr: Estou estudando <strong><abbr title="HyperText Markup Language">HTML</abbr></strong> para criar sites. <strong>PASSAR O MOUSE SOBRE O TEXTO "HTML" PARA VERIFICAR O USO DA TAG</strong></p>
+
+    <!-- TEXTOS INVERTIDOS -->
+    <p>Tag bdo juntamente com o atributo dir determina a direção do texto: <bdo dir="rtl">Texto de Exemplo.</bdo></p>
+</body>
+</html>
