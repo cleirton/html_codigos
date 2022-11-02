@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias</title>
+</head>
+<body>
+    <h1>Inserindo mídias no documento</h1>
+    <p>Temos que ter o cuidado de inserir mídias em nossos documentos html que se adaptem a diversos dispositivos</p>
+    <h2>Imagens dinâmicas</h2>
+    <p>Temos 3 imagens: 300x300, 600x600 e 1000x1000, vamos usar as 3 imagens dinamicamente. Redimensione a janela do seu navegador para perceber a diferença.</p>
+    <picture>
+        <!-- 
+            ESTA LINHA FAZ COM QUE A MODIFIQUE A IMAGEM EM EXIBIÇÃO QUANDO A TELA DIMINUE
+            A ORDEM DAS TAGS SOURCE DEVEM SER RESPEITADAS, SENDO, O ÚLTIMO, A IMAGEM PADRÃO
+        -->
+        <source media="(max-width: 650px)" srcset="imagens/img300x300.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/img600x600.png" type="image/png">
+        <img src="imagens/img1000x1000.png" alt="Imagem dinâmica">
+    </picture>
+    <h2>Audio</h2>
+    <p>Temos 3 arquivos de audio, em mp3, ogg e wav, vamos adicionar os três arquivos de audio. controls = adiciona controles como play, pause e afins</p>
+    <audio preload="metadata" controls autoplay>
+        <source src="audio/audioteste.mp3" type="audio/mpeg">
+        <source src="audio/audioteste.ogg" type="audio/ogg">
+        <source src="audio/audioteste.wav" type="audio/wav">
+    </audio>
+    <p>Não conseguiu reproduzir o audio? <a href="audio/audioteste.mp3" download="audioteste.mp3" type="audio/mpeg">Baixe aqui.</a></p>
+
+    <h2>Vídeos</h2>
+    <p>Temos um vídeo de teste.</p>
+    <video preload="metadata" controls>
+        <source src="video/videoteste.mp4" type="video/mp4">
+    </video>
+</body>
+</html>
