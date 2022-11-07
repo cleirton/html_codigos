@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <p>Lista dos inputs já feitos:</p>
+    <ul>
+        <li>text</li>
+        <li>radio</li>
+        <li>reset</li>
+        <li>password</li>
+        <li>checkbox</li>
+        <li>button</li>
+        <li>date e datetime-local</li>
+        <li>email</li>
+        <li>files</li>
+        <li>range</li>
+    </ul>
+    <p>Lista de atributos:</p>
+    <ul>
+        <li>ainda não foram feitos exemplos com atributos</li>
+    </ul>
+    <h2>Criando um formulário simples:</h2>
+    <p>Principais tags:</p>
+    <ul>
+        <li>label, como se fosse o "nome" do campo.</li>
+        <li>input, onde o usuário modifica o campo.</li>
+    </ul>
+    <p>Para ligar a tag label a tag input é preciso que o atributo for da tag label seja igual ao atributo id da tag input</p>
+    <form>
+        <label for="PrimeiroNome">Primeiro Nome:</label><br>
+        <input type="text" id="PrimeiroNome" name="PNome"><br>
+        <label for="Sobrenome">Sobrenome:</label><br>
+        <input type="text" id="Sobrenome" name="SNome">
+    </form>
+    <p><strong>OBS:</strong>O atributo id é único para cada tag, mais na frente veremos que o atributo class tem uma função parecida com o atributo id</p>
+
+    <h2>Há diversos tipos de inputs como vamos ver abaixo:</h2>
+    <h3>Radio, aqui fazemos uma escolha.</h3>
+    <p>Qual a sua linguagem de programação favorita?</p>
+    <form>
+        <input type="radio" id="cpp" name="LinguagemFavorita" value="CPP">
+        <label for="cpp">C++</label><br>
+        <input type="radio" id="python" name="LinguagemFavorita" value="PYTHON">
+        <label for="python">Python</label><br>
+        <input type="radio" id="java" name="LinguagemFavorita" value="JAVA">
+        <label for="java">Java</label><br>
+        <input type="radio" id="rust" name="LinguagemFavorita" value="RUST">
+        <label for="rust">Rust</label><br> 
+    </form>
+    <h3>Reset, volta para os valores padrão:</h3>
+    <form>
+        <label for="PrimeiroNome">Primeiro Nome:</label><br>
+        <input type="text" id="PrimeiroNome" name="PNome"><br>
+        <label for="Sobrenome">Sobrenome:</label><br>
+        <input type="text" id="Sobrenome" name="SNome"><br>
+        <input type="reset">
+    </form>
+    <h3>Password, para digitação de senhas:</h3>
+    <p>Para acessar:</p>
+    <form>
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="LOGIN"><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="SENHA">
+    </form>
+    <h3>Checkbox, aqui podemos ter várias escolhas, ou nenhuma:</h3>
+    <form>
+        <input type="checkbox" id="fruta1" name="fruta1" value="MACA">
+        <label for="fruta1">Maçã</label><br>
+        <input type="checkbox" id="fruta2" name="fruta2" value="MORANGO">
+        <label for="fruta2">Morango</label><br>
+        <input type="checkbox" id="fruta3" name="fruta3" value="ABACAXI">
+        <label for="fruta3">Abacaxi</label><br>
+        <input type="checkbox" id="fruta4" name="fruta4" value="BANANA">
+        <label for="fruta4">Banana</label><br>
+        <input type="checkbox" id="fruta5" name="fruta5" value="OUTRA">
+        <label for="fruta5">Outras</label><br>
+        <input type="reset">
+    </form>
+    <h3>Button, um botão:</h3>
+    <p>Clique em mim!</p>
+    <input type="button" onclick="alert('Você clicou no botão')" value="Clique aqui!">
+
+    <h3>Datas:</h3>
+    <p>Date, digite a data de nascimento:</p>
+    <form>
+        <label for="nascimento">Data de nascimento:</label><br>
+        <input type="date" id="nascimento" name="nascimento">
+    </form>
+    <p>Datetime-local, para uma aplicação de agendamento:</p>
+    <form>
+        <label for="nome_compromisso">Compromisso:</label><br>
+        <input type="text" id="nome_compromisso" name="nome_compromisso" value="mercado"><br>
+        <label for="data_hora">Data:</label><br>
+        <input type="datetime-local" id="data_hora" name="data_hora">
+    </form>
+
+    <h3>Email:</h3>
+    <label for="email">Digite seu email:</label><br>
+    <input type="email" id="email" name="email"><br>
+
+    <h3>Files, arquivos:</h3>
+    <p>Escolha um arquivo para upload:</p>
+    <form>
+        <label for="file_upload">Selecione o arquivo: </label>
+        <input type="file" id="file_upload" name="file">
+    </form>
+
+    <h3>Range, quando um valor específico não é importante:</h3>
+    <form>
+        <label for="volume">Controle de volume:</label><br>
+        <input type="range" id="volume" name="vol" min="0" max="100">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
